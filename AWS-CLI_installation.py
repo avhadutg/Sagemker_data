@@ -5,8 +5,8 @@ import sys
 val=subprocess.call(["aws", "--version"])
 print(val)
 if val!=0:
-	os.system('sudo apt install curl unzip')
-	os.system('curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"')
+	#os.system('sudo apt install curl unzip')
+	os.system('wget "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"')
 	os.system('unzip awscli-bundle.zip')
 	os.system('sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws')
 else:
